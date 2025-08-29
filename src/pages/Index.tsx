@@ -28,7 +28,15 @@ const Index = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-minecraft-brown to-minecraft-gray">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat" 
+        style={{ 
+          backgroundImage: `url('https://cdn.poehali.dev/files/8d0cb4ad-817b-4d5e-ad3b-35c62270b2a1.jpg')`,
+          filter: 'blur(1px)'
+        }}
+      ></div>
+      <div className="relative z-10">
       {/* Navigation */}
       <nav className="bg-black/80 backdrop-blur-sm border-b-4 border-minecraft-green sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3">
@@ -223,10 +231,11 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-minecraft-green mt-8 pt-8 text-center">
-            <p className="text-white/60">© 2024 AdvMine. Все права защищены.</p>
+            <p className="text-white/60">© 2025 AdvMine. Все права защищены.</p>
           </div>
         </div>
       </footer>
+      </div>
     </div>
   )
 }
