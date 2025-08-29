@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import Icon from "@/components/ui/icon"
 
 const Index = () => {
@@ -147,9 +148,34 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-white/80 mb-4">{article.content}</CardDescription>
-                  <Button variant="outline" className="border-minecraft-gold text-minecraft-gold hover:bg-minecraft-gold hover:text-black">
-                    Читать далее
-                  </Button>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" className="border-minecraft-gold text-minecraft-gold hover:bg-minecraft-gold hover:text-black">
+                        Читать далее
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="bg-minecraft-brown border-2 border-minecraft-gold max-w-2xl max-h-[80vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="text-minecraft-gold text-2xl">Обновление 2.7 - Небольшое обновление на сервере</DialogTitle>
+                      </DialogHeader>
+                      <DialogDescription className="text-white space-y-2">
+                        <div className="space-y-3 text-left">
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>Изменена статистика игрока справа на экране</p>
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>Увеличен критический дамаг при ударе</p>
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>Пофикшена стрельба у скелетов</p>
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>Теперь езда на вагонетках стала еще быстрее!</p>
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>Снежки при попадании и камнерез теперь наносят урон</p>
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>Печки стали быстрее переплавлять на более выскоих уровнях</p>
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>Пофикшена награда при отгадывании вопросов в чат-игре, теперь награда в рубликах выдается игроку, отгадавший вопрос</p>
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>Увеличен радиус взрыва кроватей в незере и в энде</p>
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>На лошадях теперь можно быстрее ездить и выше прыгать</p>
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>Пофикшена езда на счастливых гастах а также увеличена их скорость для путешествия</p>
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>Изменены сообщения о поднятии денег с мобов а также модель выпавших денег</p>
+                          <p className="flex items-start"><span className="text-minecraft-gold mr-2">*</span>Теперь выпадение денег с игрока происходит при каждой его смерти, а не только при убийстве игроком</p>
+                        </div>
+                      </DialogDescription>
+                    </DialogContent>
+                  </Dialog>
                 </CardContent>
               </Card>
             ))}
