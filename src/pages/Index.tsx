@@ -11,7 +11,7 @@ const Index = () => {
     maxPlayers: 1488,
     uptime: "99.8%",
     clans: 1,
-    version: "1.21.8"
+    version: "1.16-1.21.8"
   }
 
   const teamMembers = [
@@ -24,7 +24,7 @@ const Index = () => {
   // Removed donate packages
 
   const news = [
-    { title: "Фикс игровых механик", date: "25 авг", content: "Исправлены различные баги и улучшена стабильность сервера" }
+    { title: "Фикс игровых механик", date: "26 авг", content: "Исправлены различные баги и улучшена стабильность сервера" }
   ]
 
   return (
@@ -54,9 +54,7 @@ const Index = () => {
                 </a>
               ))}
             </div>
-            <Button className="bg-minecraft-green hover:bg-minecraft-green/80 text-white border-2 border-white">
-              Войти в игру
-            </Button>
+
           </div>
         </div>
       </nav>
@@ -82,7 +80,7 @@ const Index = () => {
                 <Icon name="Play" className="mr-2" />
                 Начать играть
               </Button>
-              <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-black text-xl px-8 py-4" onClick={() => window.open('https://t.me/advmine', '_blank')}>
+              <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white text-xl px-8 py-4" onClick={() => window.open('https://t.me/advmine', '_blank')}>
                 <Icon name="Send" className="mr-2" />
                 Телеграм группа
               </Button>
@@ -203,7 +201,7 @@ const Index = () => {
               <h4 className="text-lg font-semibold text-white mb-4">Сервер</h4>
               <ul className="space-y-2 text-white/80">
                 <li>IP: advmine.mc-join.org</li>
-                <li>Версия: 1.21.8</li>
+                <li>Версия: 1.16-1.21.8</li>
                 <li>Режим: Выживание + PvP</li>
               </ul>
             </div>
