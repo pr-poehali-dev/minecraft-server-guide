@@ -6,18 +6,18 @@ import Icon from "@/components/ui/icon"
 
 const Index = () => {
   const serverStats = {
-    online: 247,
-    maxPlayers: 500,
+    online: 1337,
+    maxPlayers: 1488,
     uptime: "99.8%",
-    clans: 45,
+    clans: 1,
     version: "1.21.8"
   }
 
   const teamMembers = [
-    { name: "SteveAdmin", role: "Главный администратор", avatar: "👑", status: "online" },
-    { name: "AlexModer", role: "Модератор", avatar: "🛡️", status: "online" },
-    { name: "CreeperKill", role: "Помощник", avatar: "💎", status: "offline" },
-    { name: "BuilderPro", role: "Строитель", avatar: "🔨", status: "online" }
+    { name: "Heek_Deep", role: "Главный администратор", avatar: "👑", status: "online" },
+    { name: "narkodiller77748", role: "Модератор", avatar: "🛡️", status: "online" },
+    { name: "Hef0r", role: "Помощник", avatar: "💎", status: "offline" },
+    { name: "maksimNX", role: "Стример", avatar: "🎥", status: "online" }
   ]
 
   // Removed donate packages
@@ -94,7 +94,7 @@ const Index = () => {
             {[
               { label: "Игроков онлайн", value: `${serverStats.online}/${serverStats.maxPlayers}`, icon: "Users" },
               { label: "Аптайм", value: serverStats.uptime, icon: "Activity" },
-              { label: "Активных кланов", value: serverStats.clans, icon: "Shield" },
+              { label: "Активный клан", value: serverStats.clans, icon: "Shield" },
               { label: "Версия", value: serverStats.version, icon: "Settings" },
               { label: "Заполненность", value: `${Math.round((serverStats.online/serverStats.maxPlayers)*100)}%`, icon: "BarChart3" }
             ].map((stat, index) => (
